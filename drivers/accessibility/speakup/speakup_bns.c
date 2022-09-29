@@ -16,6 +16,23 @@
 #define SYNTH_CLEAR 0x18
 #define PROCSPEECH '\r'
 
+enum default_vars_id {
+	CAPS_START,CAPS_STOP,
+	RATE,PITCH,
+	VOL,TONE,
+	DIRECT
+}
+
+
+module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+
+
 static struct var_t vars[] = {
 	{ CAPS_START, .u.s = {"\x05\x31\x32P" } },
 	{ CAPS_STOP, .u.s = {"\x05\x38P" } },

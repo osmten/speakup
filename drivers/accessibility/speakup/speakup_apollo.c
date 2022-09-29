@@ -24,6 +24,23 @@
 
 static void do_catch_up(struct spk_synth *synth);
 
+enum default_vars_id {
+	CAPS_START,CAPS_STOP,
+	RATE,PITCH,
+	VOL,VOICE,LANG,
+	DIRECT
+}
+
+
+module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
+module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
+module_param_named(lang, vars[LANG].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+
 static struct var_t vars[] = {
 	{ CAPS_START, .u.s = {"cap, " } },
 	{ CAPS_STOP, .u.s = {"" } },

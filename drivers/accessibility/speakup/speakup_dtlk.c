@@ -37,6 +37,27 @@ static unsigned int synth_portlist[] = {
 
 static u_char synth_status;
 
+
+enum default_vars_id {
+	CAPS_START,CAPS_STOP,
+	RATE,PITCH,
+	VOL,TONE,PUNCT,
+	VOICE,FREQUENCY,
+	DIRECT
+}
+
+
+module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
+module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
+module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
+module_param_named(frequency, vars[FREQUENCY].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+
 static struct var_t vars[] = {
 	{ CAPS_START, .u.s = {"\x01+35p" } },
 	{ CAPS_STOP, .u.s = {"\x01-35p" } },

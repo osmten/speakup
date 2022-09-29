@@ -18,6 +18,27 @@
 #define DRV_VERSION "2.11"
 #define SYNTH_CLEAR '!'
 
+
+enum default_vars_id {
+	CAPS_START,CAPS_STOP,
+	PAUSE,
+	RATE,PITCH,INFLECTION,
+	VOL,TONE,PUNCT,
+	DIRECT
+}
+
+module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
+module_param_named(pause, vars[PAUSE].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
+module_param_named(inflection, vars[INFLECTION].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
+module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+
+
 static struct var_t vars[] = {
 	{ CAPS_START, .u.s = {"CAPS_START\n" } },
 	{ CAPS_STOP, .u.s = {"CAPS_STOP\n" } },

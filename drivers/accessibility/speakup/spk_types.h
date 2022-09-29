@@ -131,7 +131,7 @@ struct string_var_t {
 	char *default_val;
 };
 
-struct var_t {
+struct 	var_t {
 	enum var_id_t var_id;
 	union {
 		struct num_var_t n;

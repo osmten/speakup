@@ -19,6 +19,24 @@
 static int synth_probe(struct spk_synth *synth);
 static void synth_flush(struct spk_synth *synth);
 
+
+enum default_vars_id {
+	CAPS_START,CAPS_STOP,
+	RATE,PITCH,
+	VOL,TONE,punct,
+	DIRECT
+}
+
+module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
+module_param_named(punct, vars[punct].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+
+
 static struct var_t vars[] = {
 	{ CAPS_START, .u.s = {"\x05[f99]" } },
 	{ CAPS_STOP, .u.s = {"\x05[f80]" } },
