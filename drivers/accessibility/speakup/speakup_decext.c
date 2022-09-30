@@ -39,21 +39,12 @@ static void synth_flush(struct spk_synth *synth);
 static int in_escape;
 
 enum default_vars_id {
-	CAPS_START,CAPS_STOP,
+	CAPS_START=0,CAPS_STOP,
 	RATE,PITCH,INFLECTION,
 	VOL,PUNCT,VOICE,
 	DIRECT
 }
 
-module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
-module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
-module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
-module_param_named(inflection, vars[INFLECTION].u.n.default_val, int, 0444);
-module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
-module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
-module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
-module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
 
 
 static struct var_t vars[] = {
@@ -243,10 +234,30 @@ static void synth_flush(struct spk_synth *synth)
 module_param_named(ser, synth_decext.ser, int, 0444);
 module_param_named(dev, synth_decext.dev_name, charp, 0444);
 module_param_named(start, synth_decext.startup, short, 0444);
+module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
+module_param_named(inflection, vars[INFLECTION].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
+module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
+module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+
+
 
 MODULE_PARM_DESC(ser, "Set the serial port for the synthesizer (0-based).");
 MODULE_PARM_DESC(dev, "Set the device e.g. ttyUSB0, for the synthesizer.");
 MODULE_PARM_DESC(start, "Start the synthesizer once it is loaded.");
+MODULE_PARM_DESC(caps_start, "Set the caps_start variable on load.");
+MODULE_PARM_DESC(caps_stop, "Set the caps_stop variable on load.");
+MODULE_PARM_DESC(rate, "Set the rate variable on load.");
+MODULE_PARM_DESC(pitch, "Set the pitch variable on load.");
+MODULE_PARM_DESC(inflection, "Set the inflection variable on load.");
+MODULE_PARM_DESC(vol, "Set the vol variable on load.");
+MODULE_PARM_DESC(punct, "Set the punct variable on load.");
+MODULE_PARM_DESC(voice, "Set the voice variable on load.");
+MODULE_PARM_DESC(direct, "Set the direct variable on load.");
 
 module_spk_synth(synth_decext);
 
