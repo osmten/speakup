@@ -21,11 +21,11 @@ static int synth_probe(struct spk_synth *synth);
 
 
 enum default_vars_id {
-	CAPS_START=0,CAPS_STOP,
-	RATE,PITCH,
-	VOL,TONE,PUNCT,
-	VOICE,FREQUENCY,
-	DIRECT
+	CAPS_START_id=0,CAPS_STOP_id,
+	RATE_id,PITCH_id,
+	VOL_id,TONE_id,PUNCT_id,
+	VOICE_id,FREQUENCY_id,
+	DIRECT_id,
 }
 
 
@@ -172,16 +172,16 @@ static int synth_probe(struct spk_synth *synth)
 module_param_named(ser, synth_ltlk.ser, int, 0444);
 module_param_named(dev, synth_ltlk.dev_name, charp, 0444);
 module_param_named(start, synth_ltlk.startup, short, 0444);
-module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
-module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
-module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
-module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
-module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
-module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
-module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
-module_param_named(frequency, vars[FREQUENCY].u.n.default_val, int, 0444);
-module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL_id].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE_id].u.n.default_val, int, 0444);
+module_param_named(punct, vars[PUNCT_id].u.n.default_val, int, 0444);
+module_param_named(voice, vars[VOICE_id].u.n.default_val, int, 0444);
+module_param_named(frequency, vars[FREQUENCY_id].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT_id].u.n.default_val, int, 0444);
 
 
 

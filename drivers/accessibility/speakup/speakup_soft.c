@@ -34,10 +34,10 @@ static int init_pos;
 static int misc_registered;
 
 enum default_vars_id {
-	DIRECT=0,CAPS_START,CAPS_STOP,
-	PAUSE,RATE,PITCH,INFLECTION,
-	VOL,TONE,PUNCT,VOICE,
-	FREQUENCY
+	DIRECT_id=0,CAPS_START_id,CAPS_STOP_id,
+	PAUSE_id,RATE_id,PITCH_id,INFLECTION_id,
+	VOL_id,TONE_id,PUNCT_id,VOICE_id,
+	FREQUENCY_id,
 }
 
 
@@ -461,18 +461,18 @@ static int softsynth_adjust(struct spk_synth *synth, struct st_var_header *var)
 }
 
 module_param_named(start, synth_soft.startup, short, 0444);
-module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
-module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
-module_param_named(pause, vars[PAUSE].u.n.default_val, int, 0444);
-module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
-module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
-module_param_named(inflection, vars[INFLECTION].u.n.default_val, int, 0444);
-module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
-module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
-module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
-module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
-module_param_named(frequency, vars[FREQUENCY].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT_id].u.n.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(pause, vars[PAUSE_id].u.n.default_val, int, 0444);
+module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
+module_param_named(inflection, vars[INFLECTION_id].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL_id].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE_id].u.n.default_val, int, 0444);
+module_param_named(punct, vars[PUNCT_id].u.n.default_val, int, 0444);
+module_param_named(voice, vars[VOICE_id].u.n.default_val, int, 0444);
+module_param_named(frequency, vars[FREQUENCY_id].u.n.default_val, int, 0444);
 
 
 

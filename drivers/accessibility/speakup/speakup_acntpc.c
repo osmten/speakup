@@ -35,10 +35,10 @@ static int port_forced;
 static unsigned int synth_portlist[] = { 0x2a8, 0 };
 
 enum default_vars_id {
-	CAPS_START=0,CAPS_STOP,
-	RATE,PITCH,
-	VOL,TONE,
-	DIRECT
+	CAPS_START_id=0,CAPS_STOP_id,
+	RATE,PITCH_id,
+	VOL_id,TONE_id,
+	DIRECT_id,
 }
 
 
@@ -315,13 +315,13 @@ static void accent_release(struct spk_synth *synth)
 
 module_param_hw_named(port, port_forced, int, ioport, 0444);
 module_param_named(start, synth_acntpc.startup, short, 0444);
-module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
-module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
-module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
-module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
-module_param_named(tone, vars[TONE].u.n.default_val, int, 0444);
-module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL_id].u.n.default_val, int, 0444);
+module_param_named(tone, vars[TONE_id].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT_id].u.n.default_val, int, 0444);
 
 MODULE_PARM_DESC(port, "Set the port for the synthesizer (override probing).");
 MODULE_PARM_DESC(start, "Start the synthesizer once it is loaded.");

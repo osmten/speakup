@@ -39,10 +39,10 @@ static void synth_flush(struct spk_synth *synth);
 static int in_escape;
 
 enum default_vars_id {
-	CAPS_START=0,CAPS_STOP,
-	RATE,PITCH,INFLECTION,
-	VOL,PUNCT,VOICE,
-	DIRECT
+	CAPS_START_id=0,CAPS_STOP_id,
+	RATE_id,PITCH_id,INFLECTION_id,
+	VOL_id,PUNCT_id,VOICE_id,
+	DIRECT_id,
 }
 
 
@@ -234,15 +234,15 @@ static void synth_flush(struct spk_synth *synth)
 module_param_named(ser, synth_decext.ser, int, 0444);
 module_param_named(dev, synth_decext.dev_name, charp, 0444);
 module_param_named(start, synth_decext.startup, short, 0444);
-module_param_named(caps_start, vars[CAPS_START].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP].u.s.default_val, int, 0444);
-module_param_named(rate, vars[RATE].u.n.default_val, int, 0444);
-module_param_named(pitch, vars[PITCH].u.n.default_val, int, 0444);
-module_param_named(inflection, vars[INFLECTION].u.n.default_val, int, 0444);
-module_param_named(vol, vars[VOL].u.n.default_val, int, 0444);
-module_param_named(punct, vars[PUNCT].u.n.default_val, int, 0444);
-module_param_named(voice, vars[VOICE].u.n.default_val, int, 0444);
-module_param_named(direct, vars[DIRECT].u.n.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
+module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
+module_param_named(inflection, vars[INFLECTION_id].u.n.default_val, int, 0444);
+module_param_named(vol, vars[VOL_id].u.n.default_val, int, 0444);
+module_param_named(punct, vars[PUNCT_id].u.n.default_val, int, 0444);
+module_param_named(voice, vars[VOICE_id].u.n.default_val, int, 0444);
+module_param_named(direct, vars[DIRECT_id].u.n.default_val, int, 0444);
 
 
 
