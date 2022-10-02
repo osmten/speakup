@@ -39,7 +39,7 @@ enum default_vars_id {
 	CAPS_START_id=0,CAPS_STOP_id,
 	RATE_id,PITCH_id,
 	DIRECT_id,
-}
+};
 
 
 

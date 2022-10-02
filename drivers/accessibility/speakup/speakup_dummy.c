@@ -25,7 +25,7 @@ enum default_vars_id {
 	RATE_id,PITCH_id,INFLECTION_id,
 	VOL_id,TONE_id,PUNCT_id,
 	DIRECT_id,
-}
+};
 
 
 
@@ -142,7 +142,7 @@ module_param_named(dev, synth_dummy.dev_name, charp, 0444);
 module_param_named(start, synth_dummy.startup, short, 0444);
 module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, char*, 0444);
 module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, char*, 0444);
-module_param_named(pause, vars[PAUSE_id].u.s.default_val, int, 0444);
+module_param_named(pause, vars[PAUSE_id].u.s.default_val, char*, 0444);
 module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
 module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
 module_param_named(inflection, vars[INFLECTION_id].u.n.default_val, int, 0444);

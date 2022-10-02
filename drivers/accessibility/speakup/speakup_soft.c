@@ -38,7 +38,7 @@ enum default_vars_id {
 	PAUSE_id,RATE_id,PITCH_id,INFLECTION_id,
 	VOL_id,TONE_id,PUNCT_id,VOICE_id,
 	FREQUENCY_id,
-}
+};
 
 
 

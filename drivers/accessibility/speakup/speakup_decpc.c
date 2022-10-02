@@ -139,7 +139,7 @@ enum default_vars_id {
 	RATE_id,PITCH_id,INFLECTION_id,
 	VOL_id,PUNCT_id,VOICE_id,
 	DIRECT_id,
-}
+};
 
 
 

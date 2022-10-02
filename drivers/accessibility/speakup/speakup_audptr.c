@@ -25,7 +25,7 @@ enum default_vars_id {
 	RATE_id,PITCH_id,
 	VOL_id,TONE_id,punct_id,
 	DIRECT_id,
-}
+};
 
 
 
