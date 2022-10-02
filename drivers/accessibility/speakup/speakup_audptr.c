@@ -168,8 +168,8 @@ static int synth_probe(struct spk_synth *synth)
 module_param_named(ser, synth_audptr.ser, int, 0444);
 module_param_named(dev, synth_audptr.dev_name, charp, 0444);
 module_param_named(start, synth_audptr.startup, short, 0444);
-module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, char, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, char, 0444);
 module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
 module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
 module_param_named(vol, vars[VOL_id].u.n.default_val, int, 0444);

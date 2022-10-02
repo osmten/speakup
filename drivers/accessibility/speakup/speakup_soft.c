@@ -462,8 +462,8 @@ static int softsynth_adjust(struct spk_synth *synth, struct st_var_header *var)
 
 module_param_named(start, synth_soft.startup, short, 0444);
 module_param_named(direct, vars[DIRECT_id].u.n.default_val, int, 0444);
-module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, char, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, char, 0444);
 module_param_named(pause, vars[PAUSE_id].u.n.default_val, int, 0444);
 module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
 module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);

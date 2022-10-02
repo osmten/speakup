@@ -140,8 +140,8 @@ static struct spk_synth synth_dummy = {
 module_param_named(ser, synth_dummy.ser, int, 0444);
 module_param_named(dev, synth_dummy.dev_name, charp, 0444);
 module_param_named(start, synth_dummy.startup, short, 0444);
-module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, int, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, int, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, char, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, char, 0444);
 module_param_named(pause, vars[PAUSE_id].u.s.default_val, int, 0444);
 module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
 module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
