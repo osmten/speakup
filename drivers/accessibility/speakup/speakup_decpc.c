@@ -493,8 +493,8 @@ static void dtpc_release(struct spk_synth *synth)
 }
 
 module_param_named(start, synth_dec_pc.startup, short, 0444);
-module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, char, 0444);
-module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, char, 0444);
+module_param_named(caps_start, vars[CAPS_START_id].u.s.default_val, char*, 0444);
+module_param_named(caps_stop, vars[CAPS_STOP_id].u.s.default_val, char*, 0444);
 module_param_named(rate, vars[RATE_id].u.n.default_val, int, 0444);
 module_param_named(pitch, vars[PITCH_id].u.n.default_val, int, 0444);
 module_param_named(inflection, vars[INFLECTION_id].u.n.default_val, int, 0444);
